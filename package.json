@@ -1,7 +1,15 @@
 {
   "type": "module",
+  "scripts": {
+    "dev": "node --watch app.js",
+    "db:seed": "node db/populatedb.js",
+    "db:seed:prod": "node db/populatedb.js",
+    "prod":"npm run db:seed:prod && node app.js"
+  },
   "dependencies": {
+    "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
   }
 }

@@ -1,3 +1,4 @@
+import "dotenv/config";  // Add this at the top
 import express from "express";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
