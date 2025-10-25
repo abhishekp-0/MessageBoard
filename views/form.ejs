@@ -2,9 +2,20 @@
     <title><%= title %></title>
     <body>
         <h1><%=title%></h1>
+        <%- include("partials/error") %>
         <form action="/new" method="post">
-            <input type="text" name="user" placeholder="username">
-            <input type="text" name="text" placeholder="write your message">
+            <input 
+                type="text" 
+                name="user" 
+                placeholder="username"
+                value="<%= locals.formData?.user || '' %>"
+            >
+            <input 
+                type="text" 
+                name="text" 
+                placeholder="write your message"
+                value="<%= locals.formData?.text || '' %>"
+            >
             <button type="submit">Upload</button>
         </form>
     </body>

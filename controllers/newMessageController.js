@@ -1,10 +1,7 @@
 // GET /new - Render the new message form
-const getNewMessageForm = (req, res) => {
-    res.render("form", {
-        title: "New Message"
+export const getNewMessageForm = (req, res) => {
+    res.render("form", { 
+        title: "New Message",
+        formData: {}  // Add this
     });
-};
-
-export {
-    getNewMessageForm
 };
